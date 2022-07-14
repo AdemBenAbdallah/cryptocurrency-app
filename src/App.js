@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Cryptocurrencies from "./Pages/Cryptocurrencies";
+import Exchanges from "./Pages/Exchanges";
+import News from "./Pages/News";
+import CryptoDetails from "./Components/CryptoDetails";
+import Loader from "./Components/Loader";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Cryptocurrencies" element={<Cryptocurrencies />} />
+          <Route path="/Exchanges" element={<Exchanges />} />
+          <Route path="/crypto/:coinID" element={<CryptoDetails />} />
+          <Route path="/News" element={<News />} />
+          <Route path="/Loader" element={<Loader />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

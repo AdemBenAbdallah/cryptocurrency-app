@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content{
+    width: 50% ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#input{
+    width :400px;
+}
+@media (max-width : 800px) {
+    #input{
+        width :180px;
+    }
+}
+.select{
+    width: 160px;
+    background: white;
+    border: none;
+    padding: 5px;
+    margin: 23px;
+    color: black;
+    font-size: 14px;
+    border: 1px solid #7171ccad;
+    border-radius: 5px;
+}
+.select-year{
+    width: 177px;
+    background: white;
+    padding: 3px;
+    margin: 12px;
+    border: 1px solid #4c638691;
+    border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    width: 281px;
+    margin-left: 14px;
+}
+.row span{
+    color : gray;
+    margin-left: 3px;
+}
+.row p{
+    font-weight: bold;
+}
+.Links{
+    border-bottom: 1px solid #5f9ea0b3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0 8px;
+    margin-right: 12px;
+    text-decoration: none;
+}
+.Links:hover{
+    background: rgba(153, 156, 172, 0.16);
 }
 
-.App-link {
-  color: #61dafb;
+.parg{
+    font-size: 15px;
+    font-weight: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.spin{
+    display : "flex";
+    justify-content: center;
+    align-items: center;
+}
+.spin svg{
+    font-size: 45px;
+    color: black;
 }
